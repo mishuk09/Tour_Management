@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './component/Header';
+import MemberCard from './component/MemberCard';
+import CostBreakdown from './component/CostBreakdown';
+import Body from './component/Body';
 
-function App() {
+
+const App = () => {
+  const members = [
+    { name: 'Member 1', image: 'path_to_image1.jpg' },
+    { name: 'Member 2', image: 'path_to_image2.jpg' },
+    // Add more members here...
+    { name: 'Member 12', image: 'path_to_image12.jpg' },
+  ];
+
+  const totalCost = 1200; // Example total cost
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-gray-200">
+      <Header />
+      <Body />
     </div>
   );
-}
+};
 
 export default App;
